@@ -25,7 +25,7 @@ public class UserService {
 
     public void delete(Long id){repository.deleteById(id);}
 
-    public User update(Long id,User newuser){
+    public User update(User newuser){
         User user  = findById(newuser.getId());
         user.setNome(newuser.getNome());
         user.setLogin(newuser.getLogin());

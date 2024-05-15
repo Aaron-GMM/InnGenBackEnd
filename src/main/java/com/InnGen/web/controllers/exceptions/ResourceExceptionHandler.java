@@ -1,7 +1,7 @@
 package com.InnGen.web.controllers.exceptions;
 
-import com.webservicecommerce.services.exceptions.DatabaseException;
-import com.webservicecommerce.services.exceptions.ResourceNotFoundException;
+import com.InnGen.services.exceptions.DatabaseException;
+import com.InnGen.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
