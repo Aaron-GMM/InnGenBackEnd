@@ -32,7 +32,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<User> inset(@RequestBody User obj){
         obj = service.insert(obj);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{/id}").buildAndExpand(obj.getId()).toUri();
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
         return  ResponseEntity.created(uri).body(obj);
     }
 
