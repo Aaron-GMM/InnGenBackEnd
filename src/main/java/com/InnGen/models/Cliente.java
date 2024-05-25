@@ -3,6 +3,7 @@ package com.InnGen.models;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,7 +26,8 @@ public class Cliente implements Serializable {
     @OneToOne(mappedBy = "cliente")
     private Quarto quarto;
 
-
+    @OneToMany(mappedBy = "cliente")
+    private List<Alocacao> alocacao;
 
     public Cliente(){}
 

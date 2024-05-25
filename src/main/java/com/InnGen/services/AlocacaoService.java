@@ -38,7 +38,7 @@ public class AlocacaoService {
     }
 
 
-    public Alocacao alocacao(Long userId, Long clienteId,Long quartoId){
+    public Alocacao alocar(Long userId, Long clienteId,Long quartoId){
         User user = userRepository.findById(userId).orElseThrow(()-> new IllegalArgumentException("Invalid user ID"));
         Cliente cliente = clienteRepository.findById(clienteId).orElseThrow(()-> new IllegalArgumentException("Invalid cliente ID"));
         Quarto quarto = quartoRepository.findById(quartoId).orElseThrow(()-> new IllegalArgumentException("Invalid quarto ID"));
@@ -51,7 +51,7 @@ public class AlocacaoService {
         return alocacaoRepository.save(alocacao);
     }
 
-    public void desalocacao(Long alocacaoId){
+    public void desaloca(Long alocacaoId){
         Alocacao alocacao = alocacaoRepository.findById(alocacaoId).orElseThrow(()-> new IllegalArgumentException("Invalid alocação ID"));
         Quarto quarto = alocacao.getQuarto();
         quarto.setStatus("disponivel");

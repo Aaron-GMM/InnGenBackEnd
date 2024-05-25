@@ -3,6 +3,7 @@ package com.InnGen.models;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -26,6 +27,8 @@ public class Quarto implements Serializable {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
+    @OneToMany(mappedBy = "quarto")
+    private List<Alocacao> alocacao;
 
     public Quarto(){}
 
