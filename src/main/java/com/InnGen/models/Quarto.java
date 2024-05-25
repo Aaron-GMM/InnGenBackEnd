@@ -16,7 +16,7 @@ public class Quarto implements Serializable {
     private  int tamanho;
     private double valor;
     private String status;
-
+    private String descricao;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -29,12 +29,13 @@ public class Quarto implements Serializable {
 
     public Quarto(){}
 
-    public Quarto(Long id, int numero, int tamanho, double valor, String status) {
+    public Quarto(Long id, int numero, int tamanho, double valor, String status, String descricao) {
         this.id = id;
         this.numero = numero;
         this.tamanho = tamanho;
         this.valor = valor;
         this.status = status;
+        this.descricao = descricao;
     }
 
     public Long getId() {
@@ -75,6 +76,14 @@ public class Quarto implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override

@@ -1,0 +1,30 @@
+User1
+{
+	"nome": "Aaron Gibran Moreira Monteiro",
+    "cpf_cnpj": "063.492.743-42",
+    "login":"aaron_gm",
+    "senha":"12345678"
+}
+User2
+{
+	"nome": "Geraldo Nascimento",
+    "cpf_cnpj": "069.922.321-92",
+    "login":"geraldoms",
+    "senha":"12345678"
+}
+Cliente
+{
+	"nome": "Mariana Nascimento",
+    "cpf": "032.422.221-12",
+    "telefone":"85 991228910",
+    "dt_nascimento":"09/12/2005"
+}
+Cliente2
+{
+	"nome": "Arthur Vasconcelos",
+    "cpf": "012.222.141-82",
+    "telefone":"85 991228910",
+    "dt_nascimento":"21/11/2004"
+}
+
+

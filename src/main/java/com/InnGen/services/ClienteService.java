@@ -16,17 +16,17 @@ public class ClienteService {
 
     public List<Cliente>  findAll(){return repository.findAll();}
 
-    public  Cliente findeById(Long id){
+    public  Cliente findById(Long id){
         Optional<Cliente> obj = repository.findById(id);
         return obj.orElseThrow(()->new ResourceNotFoundException(id));
     }
 
     public Cliente insert(Cliente cliente){return repository.save(cliente);}
 
-    public void delete(long id){repository.deleteById(id);}
+    public void delete(Long id){repository.deleteById(id);}
 
     public Cliente update(Cliente newcliente){
-        Cliente cliente  = findeById(newcliente.getId());
+        Cliente cliente  = findById(newcliente.getId());
         cliente.setNome(newcliente.getNome());
         cliente.setTelefone(newcliente.getTelefone());
         cliente.setDt_nascimento(newcliente.getDt_nascimento());
